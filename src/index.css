@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Raleway Light";   /*Can be any text*/
+  src: local("Figura Branding font | Taglines and Subtitles"),
+    url("./fonts/Raleway-Light.ttf") format("ttf");
+}
