@@ -1,0 +1,16 @@
+.panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.PanelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Adjust the height as needed */
+    width: 100%;
+    /* Adjust the width as needed */
+}

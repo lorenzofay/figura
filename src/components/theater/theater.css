@@ -2,22 +2,12 @@
     background-image: url('/public/Background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
     position: relative;
+    scroll-behavior: smooth;
 }
 
-.view {
+.director > div {
     width: 100vw;
     height:100vh;
-}
-
-.sculpture {
-    position: absolute;
-    height: auto;  
-}
-
-.figura-sculpture {
-    width: 75vw;
-    top: calc(100vh * 0.18);
-    left: calc(100vw * 0.30);
+    position: relative;
 }

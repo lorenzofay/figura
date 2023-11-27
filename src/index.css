@@ -17,3 +17,9 @@ code {
   src: local("Figura Branding font | Taglines and Subtitles"),
     url("./fonts/Raleway-Light.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: "Convergence-Regular";   /*Can be any text*/
+  src: local("Figura Branding font | Slogan"),
+    url("./fonts/Convergence-Regular.ttf") format("ttf");
+}
