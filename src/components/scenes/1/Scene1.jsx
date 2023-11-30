@@ -17,7 +17,7 @@ const Scene1 = () => {
   };
 
   return (
-    <div className="scene scene1" id="scene1">
+    <div className="scene presentation-container" id="scene1">
       <motion.div
         key="logo"
         variants={variants}

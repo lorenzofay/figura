@@ -1,16 +1,63 @@
-.panel {
+.PanelContainer {
+    background-image: url("./marmol-screen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: auto;
+    width: 59.58vw;
+    display: flex;
+    justify-content: space-between;
+    padding:0.573vw;
 }
 
-.PanelContainer {
+#scene-2{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.video-section {
+    width: 50%;
     height: 100%;
-    /* Adjust the height as needed */
+}
+
+.monitor-wrapper {
     width: 100%;
-    /* Adjust the width as needed */
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.monitor-wrapper video {
+    width: 100%;
+    height: auto;
+}
+
+.animated-background {
+    width: 550px;
+    height: 600px;
+    background: linear-gradient(45deg, #ff0099, #493240, #f3f315, #00f2fe);
+    background-size: 400% 400%;
+    position: relative;
+    overflow: hidden;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }

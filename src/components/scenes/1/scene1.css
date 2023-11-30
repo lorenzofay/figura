@@ -22,7 +22,7 @@
     font-weight: 200;
     text-align: end;
     margin: auto;
-    margin-top: -50px;
+    margin-top: -30px;
     margin-right: 22px;
     width: 60%;
     right: 0px;
@@ -30,6 +30,7 @@
 }
 
 .slogan {
+    font-family: 'Convergence', sans-serif;
     position: absolute;
     left: 22vw;
     top: 35vh;
@@ -44,10 +45,10 @@
     font-family: "Raleway Light";
     position: absolute;
     left: 22vw;
-    top: 38vh;
+    top: 40vh;
     width: 25vw;
     display: relative;
     color: white;
-    font-size: 40px;
+    font-size: 22px;
     font-weight: 200;   
 }

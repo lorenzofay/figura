@@ -1,3 +1,11 @@
+/* Include the custom font */
+@font-face {
+    font-family: 'Convergence';
+    src: url('../../fonts/Convergence-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .theater {
     background-image: url('/public/Background.jpg');
     background-size: cover;
