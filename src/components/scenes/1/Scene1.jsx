@@ -17,7 +17,7 @@ const Scene1 = () => {
   };
 
   return (
-    <div className="scene presentation-container" id="scene1">
+    <div id="scene1">
       <motion.div
         key="logo"
         variants={variants}
@@ -47,8 +47,6 @@ const Scene1 = () => {
       >
         {currentAct === 3 && <Description />}
       </motion.div>
-
-      {/* Other static elements can be added here */}
     </div>
   );
 };

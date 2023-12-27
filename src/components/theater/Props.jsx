@@ -17,13 +17,6 @@ const Props = () => {
 
   return (
     <div className="props">
-      <motion.img
-        src={FiguraSculpture}
-        alt="Logo Sculpture"
-        className={`sculpture figura-sculpture ${
-          currentAct <= 3 ? "" : "sculpture-position-act-4"
-        }`}
-      />
       <motion.div
         className="contact-icons"
         initial="hidden"
@@ -41,6 +34,13 @@ const Props = () => {
           className="whatsApp-icon contact-icon"
         />
       </motion.div>
+      <motion.img
+        src={FiguraSculpture}
+        alt="Logo Sculpture"
+        className={`sculpture-figura ${
+          currentAct <= 3 ? "" : "sculpture-position-act-4"
+        }`}
+      />
     </div>
   );
 };

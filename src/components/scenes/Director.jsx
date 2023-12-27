@@ -22,12 +22,19 @@ const Director = ({ children }) => {
       case 3:
         scrollToScene("scene1");
         break;
-      // Add more cases as needed
       case 4:
         scrollToScene("scene2");
         break;
+      case 6:
+        scrollToScene("scene2");
+        break;
+      case 7:
+        scrollToScene("scene3");
+        break;
+      case 8:
+        scrollToScene("scene4");
+        break;
       default:
-        // Default case if needed
         break;
     }
   }, [currentAct]);

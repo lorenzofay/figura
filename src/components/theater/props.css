@@ -12,13 +12,13 @@
     height: auto;
 }
 
-.sculpture {
+.sculpture-figura {
     height: auto;  
     width: 75vw;
     top: calc(100vh * 0.18);
     left: calc(100vw * 0.30);
     transition: transform 1s ease;
-    position: fixed;
+    position: absolute;
 }
 
 .sculpture-position-act-4 {

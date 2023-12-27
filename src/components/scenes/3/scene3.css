@@ -1,0 +1,31 @@
+.nosotros-container {
+    position: absolute;
+    top: 32vh;
+    left: 55vw;
+    width: 30vw;
+}
+
+.nosotros-container p {
+    width: 100%;
+    font-size: 1vw;
+    margin: 3px 0px;
+    color: white;
+    font-family: "Raleway Light";
+}
+
+.nosotros-container h3 {
+    width: 100%;
+    font-size: 1.2vw;
+    margin: 0px;
+    color: white;
+    font-family: "Raleway Light";
+}
+
+.sculpture-huella {
+    top: 5vh;
+    height: auto;
+    width: 45vw;
+    right: 48vw;
+    transition: transform 1s ease;
+    position: absolute;
+}

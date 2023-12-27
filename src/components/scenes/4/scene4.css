@@ -1,0 +1,41 @@
+.clientes-container {
+    position: absolute;
+    top: 32vh;
+    right: 55vw;
+    width: 30vw;
+}
+
+.clientes-container p {
+    width: 100%;
+    font-size: 1vw;
+    margin: 3px 0px;
+    color: white;
+    font-family: "Raleway Light";
+}
+
+.clientes-container h3 {
+    width: 100%;
+    font-size: 1.2vw;
+    margin: 0px;
+    color: white;
+    font-family: "Raleway Light";
+}
+
+.sculpture-hand {
+    top: -20vh;
+    height: auto;
+    width: 45vw;
+    left: 48vw;
+    transition: transform 1s ease;
+    position: absolute;
+}
+
+.sculpture-position-act-8 {
+    transition: transform 1s ease;
+    transform: translateY(22vh);
+}
+
+.sculpture-position-act-9 {
+    transition: transform 1s ease;
+    transform: translate(-30vw, 22vh) rotate(-70deg);
+}

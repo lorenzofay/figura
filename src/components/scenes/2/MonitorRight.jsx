@@ -4,13 +4,22 @@ import ActContext from "../../theater/ActContext";
 import { motion } from "framer-motion";
 
 import PlanetVideo from "./planet.mp4";
-import IdentityVideo from "./digital-identity-background.mp4";
+import BrandingVideo from "./branding.mp4";
+import DesarrolloWeb from "./DesarrolloWeb";
+import Branding from "./Branding";
 
 const Monitor = () => {
+  // Animation variants for Framer Motion
+  const variants = {
+    enter: { opacity: 0, x: -100 },
+    center: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 100 },
+  };
+
   const { currentAct } = useContext(ActContext);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
-  const videos = [PlanetVideo, IdentityVideo];
+  const videos = [PlanetVideo, BrandingVideo];
 
   useEffect(() => {
     if (currentAct === 4 || currentAct === 5) {
@@ -34,9 +43,26 @@ const Monitor = () => {
         muted
         loop
       >
-        <h3>HOLEEEEE</h3>
         <source src={videos[currentVideoIndex]} type="video/mp4" />
       </motion.video>
+      <motion.div
+        key="desarrollo"
+        variants={variants}
+        initial="enter"
+        animate={currentAct === 4 || currentAct === 5 ? "center" : "exit"}
+        transition={{ duration: 0.5, delay: 1 }}
+      >
+        {(currentAct === 4 || currentAct === 5) && <DesarrolloWeb />}
+      </motion.div>
+      <motion.div
+        key="branding"
+        variants={variants}
+        initial="enter"
+        animate={currentAct === 6 ? "center" : "exit"}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        {currentAct === 6 && <Branding />}
+      </motion.div>
     </div>
   );
 };

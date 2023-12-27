@@ -1,7 +1,6 @@
 .PanelContainer {
-    background-image: url("./marmol-screen.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    border:0.2vw solid silver;
+    border-radius: 50px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -10,14 +9,8 @@
     width: 59.58vw;
     display: flex;
     justify-content: space-between;
-    padding:0.573vw;
-}
-
-#scene-2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    overflow: hidden;
+}   
 
 .video-section {
     width: 50%;
@@ -28,9 +21,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .monitor-wrapper video {
@@ -48,16 +38,50 @@
     animation: gradientAnimation 15s ease infinite;
 }
 
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
+.service-content {
+    position: absolute;
+    z-index:100;
+    font-family: "Raleway Light";
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 3px;
+}
 
-    50% {
-        background-position: 100% 50%;
-    }
+.service-content p{
+    font-size: 1vw;
+    margin: 3px 0px;
+}
 
-    100% {
-        background-position: 0% 50%;
-    }
+.service-content h3 {
+    font-size: 1.2vw;
+    margin: 0px;
+}
+
+.marketing-digital {
+    color: Black;
+    font-family: "Raleway Light";
+    top: 20%;
+    left: 3%;
+}
+
+.identidad-digital {
+    color: white;
+    font-family: "Raleway Light";
+    bottom: 10%;
+    left: 3%;
+}
+
+.branding {
+    color: white;
+    font-family: "Raleway Light";
+    top: 20%;
+    left: 53%;
+}
+
+.desarrollo-web {
+    color: white;
+    font-family: "Raleway Light";
+    bottom: 10%;
+    left: 53%;
 }
