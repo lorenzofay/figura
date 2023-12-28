@@ -1,4 +1,4 @@
-import "./scene2.css";
+import "./Scene2.css";
 import Panel from "./Panel";
 
 const Scene2 = () => {
