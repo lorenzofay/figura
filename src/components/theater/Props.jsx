@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import FiguraSculpture from "./media/FiguraSculpture.png";
 import ActContext from "./ActContext";
 import "./props.css";
-
 import EmailIcon from "./media/EmailIcon.svg";
 import WhatsAppIcon from "./media/WhatsAppIcon.svg";
+import EmailPopUp from "../popUp/EmailPopUp";
 
 const Props = () => {
   const { currentAct } = useContext(ActContext);
@@ -23,16 +23,23 @@ const Props = () => {
         animate="visible"
         variants={iconVariants}
       >
-        <img
-          src={EmailIcon}
-          alt="Email icon"
-          className="email-icon contact-icon"
+        <EmailPopUp
+          img={EmailIcon}
+          alt={"E-mail icon"}
+          className={"contact-icon"}
         />
-        <img
-          src={WhatsAppIcon}
-          alt="WhatsApp icon"
-          className="whatsApp-icon contact-icon"
-        />
+        <a 
+        href="https://wa.me/5493489673751"
+        target="_blank"
+        rel="noopener noreferer"
+        title="Ir al chat"
+        >
+          <img
+            src={WhatsAppIcon}
+            alt="WhatsApp icon"
+            className="whatsApp-icon contact-icon"
+          />
+        </a>
       </motion.div>
       <motion.img
         src={FiguraSculpture}

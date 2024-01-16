@@ -1,15 +1,17 @@
 .contact-icons {
     position: fixed;
-    width: 6vw;
     bottom: 2vw;
     left: 3vh;
-    display:inline-flex;
+    display: inline-flex;
     gap: 25px;
+    z-index: 999;
 }
 
 .contact-icon {
     width: 50%;
     height: auto;
+    cursor: pointer;
+    width: 3vw;
 }
 
 .sculpture-figura {
