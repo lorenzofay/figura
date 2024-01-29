@@ -28,11 +28,11 @@ const Props = () => {
           alt={"E-mail icon"}
           className={"contact-icon"}
         />
-        <a 
-        href="https://wa.me/5493489673751"
-        target="_blank"
-        rel="noopener noreferer"
-        title="Ir al chat"
+        <a
+          href="https://wa.me/5493489673751"
+          target="_blank"
+          rel="noopener noreferer"
+          title="Ir al chat"
         >
           <img
             src={WhatsAppIcon}

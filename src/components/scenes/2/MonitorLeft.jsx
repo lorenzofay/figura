@@ -1,8 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import ActContext from "../../theater/ActContext";
-
 import { motion } from "framer-motion";
-
 import Gradient from "./gradient.mp4";
 import IdentityVideo from "./digital-identity-background.mp4";
 import MarketingDigital from "./MarketingDigital";
@@ -11,9 +9,9 @@ import IdentidadVirtual from "./IdentidadVirtual";
 const Monitor = () => {
   // Animation variants for Framer Motion
   const variants = {
-    enter: { opacity: 0, x: -100 },
-    center: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: 100 },
+    enter: { opacity: 0 },
+    center: { opacity: 1 },
+    exit: { opacity: 0 },
   };
 
   const { currentAct } = useContext(ActContext);

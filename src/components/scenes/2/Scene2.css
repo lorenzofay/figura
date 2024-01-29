@@ -1,15 +1,16 @@
 .PanelContainer {
     border:0.2vw solid silver;
-    border-radius: 50px;
+    border-radius: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
-    width: 59.58vw;
+    width: 48.58vw;
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    background-color: black;
 }   
 
 .video-section {
