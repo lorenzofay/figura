@@ -24,7 +24,7 @@
 
 @media (max-width:1025px) {
     .theater {
-        background-image: url('/public/back-mobile.jpg');
+        background-image: url('/public/back-mobile.jpg ');
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;

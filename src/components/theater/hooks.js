@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import ActContext from "./ActContext";
 
-export const useScrollDirection = () => {
+export const useNavigation = (play) => {
   const { currentAct, setCurrentAct } = useContext(ActContext);
   const scrollEventTimestamp = useRef(0);
   const touchStartY = useRef(0);
@@ -9,6 +9,10 @@ export const useScrollDirection = () => {
   const SCROLL_DETECTION_THRESHOLD = 150; // Time in milliseconds
 
   useEffect(() => {
+    if (!play) {
+      return;
+    }
+
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = "hidden";
 
@@ -44,15 +48,16 @@ export const useScrollDirection = () => {
     };
 
     const handleTouchMove = (e) => {
+      e.preventDefault();
       const touchEndY = e.changedTouches[0].clientY;
       const direction = touchStartY.current > touchEndY ? 1 : -1;
       handleScrollEvent(direction);
     };
 
     const handleTouchEnd = (e) => {
-      e.preventDefault();
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
+      if (e.cancelable) {
+        e.preventDefault();
+      }
     };
 
     const handleMouseDown = (e) => {
@@ -67,25 +72,24 @@ export const useScrollDirection = () => {
       e.preventDefault();
     };
 
+    // Add event listeners
     window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("contextmenu", handleContextMenu);
     window.addEventListener("touchstart", handleTouchStart, { passive: false });
     window.addEventListener("touchmove", handleTouchMove, { passive: false });
     window.addEventListener("touchend", handleTouchEnd, { passive: false });
-    window.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("contextmenu", handleContextMenu);
 
     return () => {
       document.body.style.overflow = originalStyle;
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("contextmenu", handleContextMenu);
       window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
       window.removeEventListener("touchend", handleTouchEnd);
-      window.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("contextmenu", handleContextMenu);
     };
-  }, [currentAct, setCurrentAct]);
-
-  return null;
+  }, [play, currentAct, setCurrentAct]);
 };

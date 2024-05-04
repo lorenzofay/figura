@@ -1,6 +1,7 @@
 {
   "name": "figura",
   "version": "0.1.0",
+  "homepage": "https://figura.tech/desktop",
   "private": true,
   "dependencies": {
     "@material-tailwind/react": "^2.1.8",

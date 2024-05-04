@@ -10,14 +10,17 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-const EmailPopUp = ({ img, alt, className }) => {
+const EmailPopUp = ({ img, alt, className, setPlay }) => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [toast, setToast] = useState({ message: "", type: "" });
 
-  const handleOpen = () => setOpen(!open);
+  const handleOpen = () => {
+    setPlay(open);
+    setOpen(!open);
+  };
 
   const showToast = (message, type) => {
     setToast({ message, type });

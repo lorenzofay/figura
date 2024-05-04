@@ -12,10 +12,10 @@ const FourthScene = React.lazy(() => import("../scenes/4/Scene4"));
 
 export const Theater = () => {
   const [currentAct, setCurrentAct] = useState(1);
-
+  const [play, setPlay] = useState(true);
   return (
     <div className="theater">
-      <ActContext.Provider value={{ currentAct, setCurrentAct }}>
+      <ActContext.Provider value={{ currentAct, setCurrentAct, play, setPlay }}>
         <Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Props />

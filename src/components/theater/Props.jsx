@@ -8,7 +8,7 @@ import WhatsAppIcon from "./media/WhatsAppIcon.svg";
 import EmailPopUp from "../popUp/EmailPopUp";
 
 const Props = () => {
-  const { currentAct } = useContext(ActContext);
+  const { currentAct, setPlay } = useContext(ActContext);
 
   const iconVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -27,11 +27,12 @@ const Props = () => {
           img={EmailIcon}
           alt={"E-mail icon"}
           className={"contact-icon"}
+          setPlay={setPlay}
         />
         <a
           href="https://wa.me/5493489673751"
           target="_blank"
-          rel="noopener noreferer"
+          rel="noopener noreferer noreferrer"
           title="Ir al chat"
         >
           <img

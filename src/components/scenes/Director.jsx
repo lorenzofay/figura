@@ -1,10 +1,10 @@
-import { useScrollDirection } from "../theater/hooks";
+import { useNavigation } from "../theater/hooks";
 import { useContext, useEffect } from "react";
 import ActContext from "../theater/ActContext";
 
 const Director = ({ children }) => {
-  useScrollDirection();
-  const { currentAct } = useContext(ActContext);
+  const { currentAct, play } = useContext(ActContext);
+  useNavigation(play);
 
   useEffect(() => {
     const scrollToScene = (sceneId) => {
