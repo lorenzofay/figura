@@ -1,35 +1,36 @@
-@media (min-width:1025px) {
+@media (orientation: portrait) {
 .contact-icons {
         position: fixed;
-        bottom: 2vw;
+        bottom: 4vw;
         left: 3vh;
         display: inline-flex;
-        gap: 25px;
+        gap: 15px;
         z-index: 999;
     }
 
     .contact-icon {
-        width: 50%;
         height: auto;
         cursor: pointer;
-        width: 3vw;
+        width: 12vw;
     }
 
     .sculpture-figura {
         height: auto;
-        width: 75vw;
-        top: calc(100vh * 0.18);
-        left: calc(100vw * 0.30);
+        width: 144vw;
+        max-width: none;
+        top: calc(100vh * 0.35);
+        left: calc(100vw * 0.10);
         transition: transform 1s ease;
         position: absolute;
     }
 
     .sculpture-position-act-4 {
         transition: transform 1s ease;
-        transform: translateY(calc(-170vh));
+        transform: translateY(calc(-5vh));
     }
 }
-@media (max-width:1025px) {
+
+@media (orientation: landscape) {
 .contact-icons {
     display:none;
         position: fixed;

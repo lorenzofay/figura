@@ -10,7 +10,9 @@ const Director = ({ children }) => {
     const scrollToScene = (sceneId) => {
       const sceneElement = document.getElementById(sceneId);
       if (sceneElement) {
-        sceneElement.scrollIntoView({ behavior: "smooth" });
+        const topPosition =
+          sceneElement.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({ top: topPosition, behavior: "smooth" });
       }
     };
 

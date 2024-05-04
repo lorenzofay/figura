@@ -12,7 +12,7 @@
     position: relative;
 }
 
-@media (min-width:1025px) {
+@media (orientation: landscape) {
     .theater {
         background-image: url('/public/Background.jpg');
         background-size: cover;
@@ -22,7 +22,7 @@
     }
 }
 
-@media (max-width:1025px) {
+@media (orientation: portrait) {
     .theater {
         background-image: url('/public/back-mobile.jpg ');
         background-size: cover;

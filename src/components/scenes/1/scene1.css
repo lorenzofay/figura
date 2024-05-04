@@ -1,50 +1,98 @@
+@media (orientation: portrait) {
+    .LogoContainer {
+        position: absolute;
+        left: 14vw;
+        top: 40vh;
+        width: 50vw;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .tagline {
+        font-family: "Raleway Light";
+        color: white;
+        position: absolute;
+        font-size: 4vw;
+        font-weight: 200;
+        text-align: end;
+        width: 60%;
+        right: 0px;
+        bottom: -60%;
+    }
+
+    .slogan {
+        font-family: 'Convergence', sans-serif;
+        position: absolute;
+        left: 14vw;
+        top: 40vh;
+        width: 50vw;
+        color: white;
+        font-size: 7vw;
+        font-weight: 300;
+    }
+
+    .description {
+        font-family: "Raleway Light";
+        position: absolute;
+        left: 14vw;
+        top: 40vh;
+        width: 60vw;
+        display: relative;
+        color: white;
+        font-size: 4vw;
+        font-weight: 200;
+    }
+}
+
+/* Styles for devices in landscape orientation */
+@media (orientation: landscape) {
 .LogoContainer {
-    position: absolute;
-    left: 20vw;
-    top: 40vh;
-    width: 25vw;
-}
+        position: absolute;
+        left: 20vw;
+        top: 40vh;
+        width: 25vw;
+    }
 
-.logo {
-    width: 100%;
-    height: auto;
-}
+    .logo {
+        width: 100%;
+        height: auto;
+    }
 
-/* :root {
-    --tagline-width: ;
-} */
+    .tagline {
+        font-family: "Raleway Light";
+        color: white;
+        position: absolute;
+        font-size: 1.2vw;
+        font-weight: 200;
+        text-align: end;
+        width: 60%;
+        right: 0px;
+        bottom: -15%;
+    }
 
-.tagline {
-    font-family: "Raleway Light";
-    color: white;
-    position: absolute;
-    font-size: 1.2vw;
-    font-weight: 200;
-    text-align: end;
-    width: 60%;
-    right: 0px;
-    bottom: -15%;
-}
+    .slogan {
+        font-family: 'Convergence', sans-serif;
+        position: absolute;
+        left: 22vw;
+        top: 35vh;
+        width: 25vw;
+        color: white;
+        font-size: 3.5vw;
+        font-weight: 300;
+    }
 
-.slogan {
-    font-family: 'Convergence', sans-serif;
-    position: absolute;
-    left: 22vw;
-    top: 35vh;
-    width: 25vw;
-    color: white;
-    font-size: 3.5vw;
-    font-weight: 300;
-}
-
-.description{
-    font-family: "Raleway Light";
-    position: absolute;
-    left: 22vw;
-    top: 40vh;
-    width: 25vw;
-    display: relative;
-    color: white;
-    font-size: 1.2vw;
-    font-weight: 200;   
+    .description {
+        font-family: "Raleway Light";
+        position: absolute;
+        left: 22vw;
+        top: 40vh;
+        width: 25vw;
+        display: relative;
+        color: white;
+        font-size: 1.2vw;
+        font-weight: 200;
+    }
 }
