@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import ActContext from "./ActContext";
 
 export const useNavigation = (play) => {
@@ -92,4 +92,25 @@ export const useNavigation = (play) => {
       window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [play, currentAct, setCurrentAct]);
+};
+
+export const useOrientation = () => {
+  const [orientation, setOrientation] = useState(
+    window.innerWidth > window.innerHeight ? "landscape" : "portrait"
+  );
+
+  const handleResize = () => {
+    setOrientation(
+      window.innerWidth > window.innerHeight ? "landscape" : "portrait"
+    );
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  return orientation;
 };

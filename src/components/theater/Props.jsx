@@ -1,14 +1,20 @@
+import "./props.css";
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import FiguraSculpture from "./media/FiguraSculpture.png";
+import FiguraSculptureMobile from "./media/FiguraSculptureMobile.png";
 import ActContext from "./ActContext";
-import "./props.css";
+import { useOrientation } from "./hooks";
 import EmailIcon from "./media/EmailIcon.svg";
 import WhatsAppIcon from "./media/WhatsAppIcon.svg";
 import EmailPopUp from "../popUp/EmailPopUp";
 
 const Props = () => {
   const { currentAct, setPlay } = useContext(ActContext);
+  const orientation = useOrientation();
+
+  const figuraSculpture =
+    orientation === "landscape" ? FiguraSculpture : FiguraSculptureMobile;
 
   const iconVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -43,7 +49,7 @@ const Props = () => {
         </a>
       </motion.div>
       <motion.img
-        src={FiguraSculpture}
+        src={figuraSculpture}
         alt="Logo Sculpture"
         className={`sculpture-figura ${
           currentAct <= 3 ? "" : "sculpture-position-act-4"

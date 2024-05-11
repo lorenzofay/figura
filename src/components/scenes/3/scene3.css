@@ -26,7 +26,6 @@
         bottom: 55vh;
         height: auto;
         width: 75vw;
-        max-width: none;
         left: 20vw;
         transition: transform 1s ease;
         position: absolute;

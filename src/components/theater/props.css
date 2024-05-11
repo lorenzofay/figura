@@ -16,10 +16,9 @@
 
     .sculpture-figura {
         height: auto;
-        width: 144vw;
-        max-width: none;
+        width: 50vw;
         top: calc(100vh * 0.35);
-        left: calc(100vw * 0.10);
+        right: 0;
         transition: transform 1s ease;
         position: absolute;
     }
