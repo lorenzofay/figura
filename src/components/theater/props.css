@@ -31,7 +31,6 @@
 
 @media (orientation: landscape) {
 .contact-icons {
-    display:none;
         position: fixed;
         bottom: 2vw;
         left: 3vh;
@@ -41,11 +40,10 @@
     }
 
     .contact-icon {
-    display: none;
         width: 50%;
         height: auto;
         cursor: pointer;
-        width: 3vw;
+        width: 70px;
     }
 
     .sculpture-figura {
